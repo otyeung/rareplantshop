@@ -4,7 +4,12 @@ A simple static website for a rare plant shop, built with [Mobirise](https://mob
 
 ## Live site
 
-https://otyeung.github.io/rareplantshop/
+The site is published to two hosts:
+
+| Host | URL |
+| --- | --- |
+| Vercel | https://rareplantshop.vercel.app |
+| GitHub Pages | https://otyeung.github.io/rareplantshop/ |
 
 ## Contents
 
@@ -27,7 +32,16 @@ Then open http://localhost:8000 in your browser.
 
 ## Deployment
 
-The site is deployed automatically by GitHub Pages from the `main` branch (root folder). Any push to `main` republishes the site.
+Both hosts deploy automatically from the `main` branch:
+
+- **Vercel** — the repository is connected as a Vercel Git integration. Pushes to `main` publish to production; pushes to other branches create preview deployments. The site is served statically from the repository root (no build step). `.vercelignore` keeps the Mobirise editor project file out of the deployment bundle.
+- **GitHub Pages** — served from the `main` branch root folder. `.nojekyll` makes Pages publish the files as-is instead of processing them with Jekyll.
+
+To deploy to Vercel manually:
+
+```bash
+vercel deploy --prod
+```
 
 ## License
 

@@ -1,7 +1,7 @@
 # Mobirise editor project file (not part of the published site)
 project.mobirise
 
-# Local logs and OS cruft
+# Local logs, OS cruft and VCS metadata
 *.log
 .DS_Store
-.vercel
+.git
